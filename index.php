@@ -3,23 +3,14 @@
 	include_once __DIR__ .'/controller/config.php';
 
 	# inclusion de la configuration /* */
+
+	include_once __DIR__ .'/partial/head.inc.php';
 ?>
 
 
 
-<!DOCTYPE html>
-<html lang="<?php print $lang[0] ?>">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php print." ".$version title ?></title>
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="<?php print css ?>">
-</head>
+
+<!-- head -->
 <body>
 	<!--cours https://hackmd.io/iNktz6XzRyu7gGmKvPpXfQ?view-->
 	<header>
@@ -28,6 +19,9 @@
 			<?php print title." ".$version ?>
 		</h1>
 	</header>
+
+	<!-- header -->
+
 	<main>
         <figure>
             <img src="./asset/cover.svg" alt="cover php">
@@ -48,10 +42,14 @@
 			<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.2.34 Server at localhost Port 80</address>
 		</section>
 	</main>
+	<!-- main -->
 	<!-- <pre>
 	</pre> -->
 	<footer>
-		<p>&copy; - MIT - 2021</p>
+		<p>&copy; - MIT - <time datetime="<?= $date->format('Y-m-d') ?>">
+			<?= $date->format('Y') ?>
+		</time>
+	</p>
 	</footer>
 	
 </html>
