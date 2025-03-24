@@ -41,6 +41,11 @@
 
 
 	<!-- footer -->
+ 	<pre>
+	<?php
+	print_r($_SERVER)
+	?>
+	</pre>
 	
 	
 	<!--cours https://hackmd.io/iNktz6XzRyu7gGmKvPpXfQ?view-->
